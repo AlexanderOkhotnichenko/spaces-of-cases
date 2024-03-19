@@ -1320,6 +1320,10 @@ li {
   .main {
     height: 1260px;
   }
+  .main-blur-left, .main-blur-right {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
   .stars {
     left: 0;
   }

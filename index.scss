@@ -1607,6 +1607,11 @@ li {
 @media screen and (max-width: 470px) {
   .main {
     height: 1260px;
+    &-blur-left,
+    &-blur-right {
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
   }
   .stars {
     left: 0;
