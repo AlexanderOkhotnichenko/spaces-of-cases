@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const referenStart = document.querySelector('.prome-start');
   const space = document.querySelector('.space');
   const stars = document.querySelector('.stars');
+  const arrows = document.querySelectorAll('.arrow-all-hidden');
   let activeIndex = 0;
   let noRotate = false;
 
@@ -107,6 +108,26 @@ document.addEventListener("DOMContentLoaded", () => {
     referenStart.classList.add('hidden');
     space.classList.add('rotate');
     stars.classList.add('scale');
+
+    arrows.forEach((item) => {
+      item.classList.add('hidden-arrow');
+
+      if (item.classList.contains('hidden-arrow')) {
+        gsap.to(`.arrows-left`, {
+          duration: 2.2,
+          left: -140,
+          opacity: 0,
+          ease: "power1.out",
+        });
+
+        gsap.to(`.arrows-right`, {
+          duration: 2.2,
+          right: -140,
+          opacity: 0,
+          ease: "power1.out",
+        });
+      }
+    });
 
     if (space.classList.contains('rotate')) {
       gsap.to(`.space`, {
