@@ -15,7 +15,7 @@ body {
   min-width: 20rem;
   min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(120deg, #1d2948 -2%, #141d33 21%, #0f1628 33%, #050a16 92%);
+  background-color: #000000;
 }
 
 button {
@@ -45,6 +45,15 @@ p,
 li {
   margin: 0;
   padding: 0;
+}
+
+.background-gradient {
+  position: absolute;
+  inset: 0 0 0 0;
+  background: linear-gradient(120deg, #1d2948 -2%, #141d33 21%, #0f1628 33%, #050a16 92%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* HEADER */

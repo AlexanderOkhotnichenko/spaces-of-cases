@@ -108,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     referenStart.classList.add('hidden');
     space.classList.add('rotate');
     stars.classList.add('scale');
+    document.body.classList.add('color-background');
 
     arrows.forEach((item) => {
       item.classList.add('hidden-arrow');
@@ -150,6 +151,13 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity: 1,
         duration: 2,
         ease: "power2.out",
+      });
+
+      gsap.to(`.background-gradient`, {
+        opacity: 1,
+        background: "linear-gradient(120deg, #1d2948 -2%, #141d33 21%, #0f1628 33%, #050a16 92%)",
+        duration: 1,
+        ease: "power1.out",
       });
     }
 
