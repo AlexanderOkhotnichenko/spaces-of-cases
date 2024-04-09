@@ -4,8 +4,8 @@
 <head>
   <!-- Google Tag Manager -->
   <script>
-  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}
-  (function (w, d, s, l, i) {
+    window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); }
+    (function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
           new Date().getTime(), event: 'gtm.js'
@@ -227,15 +227,19 @@
           </div>
           <div class="help-box">
             <a href="mailto:help@skin.club" target="_black" class="support">
-              <svg class="icon">
-                <use xlinkHref="/assets/sprites.svg#skin-club-footer-support-email" />
+              <svg class="icon" width="19" height="15" viewBox="0 0 19 15" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19 12.168C19 12.578 18.88 12.958 18.69 13.288L12.69 6.69799L18.62 1.59799C18.86 1.94799 19 2.37799 19 2.82799V12.168ZM9.5 7.88799L17.76 0.787986C17.42 0.607986 17.04 0.497986 16.62 0.497986H2.37C1.96 0.497986 1.58 0.607986 1.24 0.787986L9.5 7.88799ZM11.8 7.45799L9.89 9.10799C9.78 9.19799 9.64 9.24799 9.5 9.24799C9.36 9.24799 9.22 9.19799 9.11 9.10799L7.2 7.45799L1.13 14.138C1.49 14.368 1.91 14.498 2.37 14.498H16.62C17.08 14.498 17.51 14.368 17.87 14.138L11.8 7.45799ZM0.37 1.58799C0.14 1.94799 0 2.37799 0 2.82799V12.158C0 12.568 0.12 12.948 0.3 13.278L6.3 6.67799L0.37 1.58799Z"
+                  fill="#413D4B" />
               </svg>
               <span>help@skin.club</span>
             </a>
             <a href="https://skin.club/en/faq" target="_black" class="faq">
-              <svg class="icon">
-                <use xlinkHref="/assets/sprites.svg#skin-club-footer-support-faq" />
-              </svg>
+              <svg class="icon" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.9106 0.498584C3.0406 0.548584 -0.0494017 3.72858 0.00059833 7.58858C0.0505983 11.4486 3.2306 14.5486 7.0906 14.4886C10.9506 14.4386 14.0506 11.2586 14.0006 7.39858C13.9506 3.53858 10.7706 0.448584 6.9106 0.498584ZM6.8906 11.7586H6.8506C6.2506 11.7386 5.8406 11.2986 5.8506 10.7186C5.8706 10.1386 6.3006 9.71858 6.8706 9.71858H6.9006C7.5106 9.73858 7.9306 10.1686 7.9106 10.7786C7.9006 11.3586 7.4806 11.7586 6.8906 11.7586ZM9.3906 6.78858C9.2506 6.98858 8.9406 7.23858 8.5506 7.53858L8.1306 7.82858C7.8906 8.01858 7.7506 8.18858 7.7006 8.35858C7.6606 8.48858 7.6406 8.51858 7.6306 8.78858V8.85858H6.0006V8.71858C6.0206 8.14858 6.0306 7.81858 6.2706 7.53858C6.6406 7.10858 7.4506 6.57858 7.4906 6.55858C7.6106 6.46858 7.7006 6.36858 7.7806 6.26858C7.9506 6.02858 8.0306 5.84858 8.0306 5.66858C8.0306 5.41858 7.9506 5.17858 7.8106 4.96858C7.6606 4.76858 7.3906 4.66858 7.0006 4.66858C6.6106 4.66858 6.3406 4.78858 6.1806 5.04858C6.0206 5.30858 5.9306 5.57858 5.9306 5.85858V5.92858H4.2506V5.85858C4.2906 4.82858 4.6606 4.08858 5.3406 3.65858C5.7706 3.37858 6.3006 3.23858 6.9206 3.23858C7.7306 3.23858 8.4206 3.43858 8.9606 3.82858C9.5206 4.21858 9.8006 4.80858 9.8006 5.58858C9.8006 6.01858 9.6606 6.41858 9.3906 6.78858Z" fill="#413D4B"/>
+                </svg>
+                
               <span>FAQ</span>
             </a>
           </div>
@@ -295,60 +299,60 @@
   </div>
 
   <script>
-      // Set default consent to 'denied' as a placeholder
-      // Determine actual values based on your own requirements
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
-      });
+    // Set default consent to 'denied' as a placeholder
+    // Determine actual values based on your own requirements
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
   </script>
 
   <!-- Create one update function for each consent parameter -->
   <script>
 
-      function consentGrantedAdStorage() {
-        gtag('consent', 'update', {
-          'ad_storage': 'granted',
-        });
-      }
-      function consentGrantedAdUserData() {
-        gtag('consent', 'update', {
-          'ad_user_data': 'granted'
-        });
-
-      }
-      function consentGrantedAdPersonalization() {
-        gtag('consent', 'update', {
-          'ad_personalization': 'granted'
-        });
-      }
-      function consentGrantedAnalyticsStorage() {
-        gtag('consent', 'update', {
-          'analytics_storage': 'granted'
-        });
-      }
-      
-
-      document.querySelector('.accept-cookie-button').addEventListener('click', function (e) {
-        e.preventDefault();
-        document.cookie = "cookiesAccepted=true;max-age=31536000;path=/";
-        document.querySelector('.cookies-policy-banner').remove();
-        consentGrantedAdStorage();
-        consentGrantedAdUserData();
-        consentGrantedAdPersonalization();
-        consentGrantedAnalyticsStorage();
+    function consentGrantedAdStorage() {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+      });
+    }
+    function consentGrantedAdUserData() {
+      gtag('consent', 'update', {
+        'ad_user_data': 'granted'
       });
 
-      let matches = document.cookie.match(new RegExp("(?:^|; )" + 'cookiesAccepted'.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-      if (matches && matches[1] === 'true') {
-        document.querySelector('.cookies-policy-banner').remove();
-        consentGrantedAdStorage();
-        consentGrantedAdUserData();
-        consentGrantedAdPersonalization();
-        consentGrantedAnalyticsStorage();
-      }
+    }
+    function consentGrantedAdPersonalization() {
+      gtag('consent', 'update', {
+        'ad_personalization': 'granted'
+      });
+    }
+    function consentGrantedAnalyticsStorage() {
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+    }
+
+
+    document.querySelector('.accept-cookie-button').addEventListener('click', function (e) {
+      e.preventDefault();
+      document.cookie = "cookiesAccepted=true;max-age=31536000;path=/";
+      document.querySelector('.cookies-policy-banner').remove();
+      consentGrantedAdStorage();
+      consentGrantedAdUserData();
+      consentGrantedAdPersonalization();
+      consentGrantedAnalyticsStorage();
+    });
+
+    let matches = document.cookie.match(new RegExp("(?:^|; )" + 'cookiesAccepted'.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+    if (matches && matches[1] === 'true') {
+      document.querySelector('.cookies-policy-banner').remove();
+      consentGrantedAdStorage();
+      consentGrantedAdUserData();
+      consentGrantedAdPersonalization();
+      consentGrantedAnalyticsStorage();
+    }
   </script>
   <script type="module" src="./main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
