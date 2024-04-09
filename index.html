@@ -17,13 +17,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
-  <title>Spaces of Cases</title>
+  <title>Cases Galaxy</title>
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8LD3B3" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div class="background-gradient"></div>
   <header class="header" id="header">
     <div class="container">
@@ -290,59 +291,63 @@
       </div>
     </div>
   </div>
-  <!-- End Google Tag Manager (noscript) -->
+
   <script>
-    // Set default consent to 'denied' as a placeholder
-    // Determine actual values based on your own requirements
-    gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied'
+    document.addEventListener("DOMContentLoaded", () => {
+      // Set default consent to 'denied' as a placeholder
+      // Determine actual values based on your own requirements
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      });
     });
   </script>
 
   <!-- Create one update function for each consent parameter -->
   <script>
-    function consentGrantedAdStorage() {
-      gtag('consent', 'update', {
-        'ad_storage': 'granted',
-      });
-    }
-    function consentGrantedAdUserData() {
-      gtag('consent', 'update', {
-        'ad_user_data': 'granted'
-      });
-    }
-    function consentGrantedAdPersonalization() {
-      gtag('consent', 'update', {
-        'ad_personalization': 'granted'
-      });
-    }
-    function consentGrantedAnalyticsStorage() {
-      gtag('consent', 'update', {
-        'analytics_storage': 'granted'
-      });
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+      function consentGrantedAdStorage() {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+        });
+      }
+      function consentGrantedAdUserData() {
+        gtag('consent', 'update', {
+          'ad_user_data': 'granted'
+        });
+      }
+      function consentGrantedAdPersonalization() {
+        gtag('consent', 'update', {
+          'ad_personalization': 'granted'
+        });
+      }
+      function consentGrantedAnalyticsStorage() {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      }
 
-    document.querySelector('.accept-cookie-button').addEventListener('click', function (e) {
-      e.preventDefault();
-      document.cookie = "cookiesAccepted=true;max-age=31536000;path=/";
-      document.querySelector('.cookies-policy-banner').remove();
-      consentGrantedAdStorage();
-      consentGrantedAdUserData();
-      consentGrantedAdPersonalization();
-      consentGrantedAnalyticsStorage();
+      document.querySelector('.accept-cookie-button').addEventListener('click', function (e) {
+        e.preventDefault();
+        document.cookie = "cookiesAccepted=true;max-age=31536000;path=/";
+        document.querySelector('.cookies-policy-banner').remove();
+        consentGrantedAdStorage();
+        consentGrantedAdUserData();
+        consentGrantedAdPersonalization();
+        consentGrantedAnalyticsStorage();
+      });
+
+      let matches = document.cookie.match(new RegExp("(?:^|; )" + 'cookiesAccepted'.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
+      if (matches && matches[1] === 'true') {
+        document.querySelector('.cookies-policy-banner').remove();
+        consentGrantedAdStorage();
+        consentGrantedAdUserData();
+        consentGrantedAdPersonalization();
+        consentGrantedAnalyticsStorage();
+      }
     });
-
-    let matches = document.cookie.match(new RegExp("(?:^|; )" + 'cookiesAccepted'.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-    if (matches && matches[1] === 'true') {
-      document.querySelector('.cookies-policy-banner').remove();
-      consentGrantedAdStorage();
-      consentGrantedAdUserData();
-      consentGrantedAdPersonalization();
-      consentGrantedAnalyticsStorage();
-    }
   </script>
   <script type="module" src="./main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
