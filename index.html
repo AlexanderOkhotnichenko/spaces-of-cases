@@ -307,7 +307,7 @@
 
   <!-- Create one update function for each consent parameter -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+
       function consentGrantedAdStorage() {
         gtag('consent', 'update', {
           'ad_storage': 'granted',
@@ -329,6 +329,7 @@
           'analytics_storage': 'granted'
         });
       }
+      
 
       document.querySelector('.accept-cookie-button').addEventListener('click', function (e) {
         e.preventDefault();
@@ -348,7 +349,6 @@
         consentGrantedAdPersonalization();
         consentGrantedAnalyticsStorage();
       }
-    });
   </script>
   <script type="module" src="./main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
